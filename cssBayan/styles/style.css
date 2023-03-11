@@ -72,3 +72,50 @@ body {
 }
 
 
+@media (max-width: 480px) {
+    .wrapper {
+        max-width: 62vw;
+    }
+    .header__title {
+        font-size: 100%;
+    }
+    label input[type="radio"]:checked +.accordion__title + .accordion__image {
+        height: 9.375em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .wrapper {
+        max-width: 73vw;
+    }
+    .header__title {
+        font-size: 150%;
+    }
+    label input[type="radio"]:checked +.accordion__title + .accordion__image {
+        height: 13.125em;
+    }
+}
+
+@media (min-width: 1025px) {
+    .wrapper {
+        max-width: 60vw;
+    }
+    .header__title {
+        font-size: 200%;
+    }
+}
+
+@media (hover: hover) {
+    .accordion__block:hover {
+        color: rgba(6, 6, 240, 0.836);
+    }
+    .accordion__block:hover .button {
+        visibility: visible;
+    }
+    .accordion__item:hover .accordion__image {
+        height: 19.375em;
+    }
+    label input[type="radio"]:checked +.accordion__title + .accordion__image {
+        height: 19.375em;
+    }
+}
