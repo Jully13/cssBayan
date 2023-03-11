@@ -1,0 +1,74 @@
+@import url(./normalize.css);
+
+
+body {
+    background-color: goldenrod;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: 2s;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+}
+
+.header__wrapper {
+    border-bottom: 0.05em solid rgb(127, 132, 177);
+    padding: 2em 0 1.5em;
+}
+
+.header__title {
+    color: rgb(28, 16, 16);
+}
+
+.accordion__item {
+    cursor: pointer;
+    padding: 1em 0;
+    border-bottom: 0.05em solid rgb(127, 132, 177);
+}
+
+.accordion__item label {
+    cursor: pointer;
+}
+
+.accordion__title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion__image {
+    display: block;
+    height: 0vh;
+    margin: 1em auto;
+    overflow: hidden;
+    transition: height 1s ease;
+}
+
+.button {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    background: url('../assets/svg/plus-solid.svg') no-repeat;
+    cursor: pointer;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.accordion__item input[type="radio"] {
+    display: none;
+}
+
+.accordion__item input[type="radio"]:checked + .accordion__title .button {
+    background: url('../assets/svg/xmark-solid.svg') no-repeat;
+}
+
+.accordion__item input[type="radio"]:checked + .accordion__title {
+    color: rgba(6, 6, 240, 0.836);
+}
+
+
