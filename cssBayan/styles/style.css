@@ -32,10 +32,6 @@ body {
     border-bottom: 0.05em solid rgb(127, 132, 177);
 }
 
-.accordion__item label {
-    cursor: pointer;
-}
-
 .accordion__title {
     display: flex;
     justify-content: space-between;
@@ -46,7 +42,7 @@ body {
     height: 0vh;
     margin: 0.4em auto;
     overflow: hidden;
-    transition: height 1s ease;
+    transition: height 2s ease;
 }
 
 .button {
@@ -55,8 +51,8 @@ body {
     width: 1em;
     background: url('../assets/svg/plus-solid.svg') no-repeat;
     cursor: pointer;
-    visibility: hidden;
-    transition: 0.3s;
+    opacity: 0;
+    transition: 1s;
 }
 
 .accordion__item input[type="radio"] {
@@ -70,7 +66,6 @@ body {
 .accordion__item input[type="radio"]:checked + .accordion__title {
     color: rgba(6, 6, 240, 0.836);
 }
-
 
 @media (max-width: 480px) {
     .wrapper {
@@ -115,16 +110,28 @@ body {
 }
 
 @media (hover: hover) {
+    .accordion__item {
+        cursor: pointer;
+    }
+    .accordion__item label {
+        cursor: pointer;
+    }
     .accordion__block:hover {
         color: rgba(6, 6, 240, 0.836);
     }
     .accordion__block:hover .button {
-        visibility: visible;
+        opacity: 1;
     }
     .accordion__item:hover .accordion__image {
         height: 13.125em;
     }
     label input[type="radio"]:checked +.accordion__title + .accordion__image {
         height: 13.125em;
+    }
+    label:active .accordion__image{
+        filter: brightness(0.5);
+    }
+    label:active {
+        cursor:progress;
     }
 }
