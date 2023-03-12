@@ -35,6 +35,7 @@ body {
 .accordion__title {
     display: flex;
     justify-content: space-between;
+    color: #524A3A;
 }
 
 .accordion__image {
@@ -52,19 +53,21 @@ body {
     background: url('../assets/svg/plus-solid.svg') no-repeat;
     cursor: pointer;
     opacity: 0;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .accordion__item input[type="radio"] {
     display: none;
 }
 
+
+
 .accordion__item input[type="radio"]:checked + .accordion__title .button {
-    background: url('../assets/svg/xmark-solid.svg') no-repeat;
+    transform: rotate(45deg);
 }
 
 .accordion__item input[type="radio"]:checked + .accordion__title {
-    color: rgba(6, 6, 240, 0.836);
+    color: #217CA3;
 }
 
 @media (max-width: 480px) {
@@ -116,22 +119,29 @@ body {
     .accordion__item label {
         cursor: pointer;
     }
-    .accordion__block:hover {
-        color: rgba(6, 6, 240, 0.836);
-    }
     .accordion__block:hover .button {
         opacity: 1;
     }
     .accordion__item:hover .accordion__image {
         height: 13.125em;
     }
-    label input[type="radio"]:checked +.accordion__title + .accordion__image {
+    .accordion__item:hover .button {
+        opacity: 1;
+        transform: rotate(45deg);
+    }
+    .accordion__item label input[type="radio"]:checked +.accordion__title + .accordion__image {
         height: 13.125em;
     }
-    label:active .accordion__image{
+    .accordion__item label:active .accordion__title{
+        color: #F70025;
+    }
+    .accordion__item label:active .accordion__image{
         filter: brightness(0.5);
     }
-    label:active {
-        cursor:progress;
+    .accordion__item label:active {
+        cursor:wait;
+    }
+    .accordion__block:hover .accordion__title{
+        color: #217CA3;
     }
 }
