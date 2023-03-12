@@ -61,7 +61,6 @@ body {
 }
 
 
-
 .accordion__item input[type="radio"]:checked + .accordion__title .button {
     transform: rotate(45deg);
 }
@@ -80,7 +79,7 @@ body {
     .accordion__block {
         font-size: 100%;
     }
-    label input[type="radio"]:checked +.accordion__title + .accordion__image {
+    .accordion__item label input[type="radio"]:checked +.accordion__title + .accordion__image {
         height: 9.375em;
     }
 }
@@ -95,7 +94,7 @@ body {
     .accordion__block {
         font-size: 120%;
     }
-    label input[type="radio"]:checked +.accordion__title + .accordion__image {
+    .accordion__item label input[type="radio"]:checked +.accordion__title + .accordion__image {
         height: 13.125em;
     }
 }
@@ -109,6 +108,9 @@ body {
     }
     .accordion__block {
         font-size: 150%;
+    }
+    .accordion__item label input[type="radio"]:checked +.accordion__title + .accordion__image {
+        height: 13.125em;
     }
 }
 
@@ -128,9 +130,6 @@ body {
     .accordion__item:hover .button {
         opacity: 1;
         transform: rotate(45deg);
-    }
-    .accordion__item label input[type="radio"]:checked +.accordion__title + .accordion__image {
-        height: 13.125em;
     }
     .accordion__item label:active .accordion__title{
         color: #F70025;
